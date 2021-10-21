@@ -8,9 +8,10 @@ const Layout = styled.div`
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
+    <>
+      <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       <Component {...pageProps} />
-    </Layout>
+    </>
   );
 }
 
