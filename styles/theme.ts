@@ -2,6 +2,7 @@ const theme = {
   typography: {
     h1: '2rem',
     h2: '1.3rem',
+    logo: '2rem',
     h3: '1.2rem',
     p: '1.125rem', // 18px
     label: '1rem',
@@ -28,3 +29,43 @@ const theme = {
 };
 
 export default theme;
+
+export interface Theme {
+  typography: Typography;
+  palette: Palette;
+  borderRadius: string;
+  paddingTB: string;
+  paddingTBLR: string;
+  margin: string;
+}
+
+export interface Palette {
+  primary: Primary;
+  secondary: Secondary;
+  neutral: Neutral;
+}
+
+export interface Neutral {
+  gray: string;
+  grayishViolet: string;
+  veryDarkBlue: string;
+  veryDarkViolet: string;
+}
+
+export interface Primary {
+  cyan: string;
+  darkViolet: string;
+}
+
+export interface Secondary {
+  red: string;
+}
+
+export interface Typography {
+  h1: string;
+  h2: string;
+  logo: string;
+  h3: string;
+  p: string;
+  label: string;
+}
