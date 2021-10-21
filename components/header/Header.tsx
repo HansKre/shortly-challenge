@@ -1,9 +1,12 @@
 import { Logo } from './Logo';
+import { Layout } from 'components';
 
 export default function Header() {
   return (
-    <header role='header' aria-label='Page Header'>
-      <Logo>Shortly</Logo>
-    </header>
+    <Layout>
+      <header role='header' aria-label='Page Header'>
+        <Logo>Shortly</Logo>
+      </header>
+    </Layout>
   );
 }
