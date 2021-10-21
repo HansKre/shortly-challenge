@@ -8,7 +8,7 @@ const StyledFooter = styled.footer`
 
 export default function Footer() {
   return (
-    <Layout bgColor={theme.palette.neutral.veryDarkViolet}>
+    <Layout bgColor={theme.palette.neutral.veryDarkViolet} paddingTop={'27px'}>
       <StyledFooter aria-label='Footer'>
         <Logo bright>Shortly</Logo>
       </StyledFooter>
