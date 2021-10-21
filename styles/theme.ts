@@ -1,10 +1,10 @@
 const theme = {
   typography: {
     h1: '4.4rem',
-    h2: '1.3rem',
+    h2: '2.3rem',
     logo: '2rem',
     h3: '1.17rem',
-    p: '1.125rem', // 18px
+    p: '1rem',
     label: '1rem',
   },
   palette: {

@@ -1,20 +1,18 @@
 import { Layout } from 'components';
-import styled from 'styled-components';
 import theme from 'styles/theme';
-
-const Section = styled.section`
-  height: 775px;
-`;
+import { H2 } from './H2';
+import { P } from './P';
+import { Section } from './Section';
 
 export default function Statistics() {
   return (
     <Layout bgColor={theme.palette.neutral.sectionBackground}>
       <Section role='article' aria-label='Advanced Statistics Section'>
-        <h2>Advanced Statistics</h2>
-        <p>
+        <H2>Advanced Statistics</H2>
+        <P>
           Track how your links are performing across the web with our advanced
           statistics dashboard.
-        </p>
+        </P>
       </Section>
     </Layout>
   );
