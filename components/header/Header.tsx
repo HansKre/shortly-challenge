@@ -1,5 +1,4 @@
-import { Logo } from './Logo';
-import { Layout } from 'components';
+import { Layout, Logo } from 'components';
 
 export default function Header() {
   return (
