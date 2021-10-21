@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Header } from 'components';
+import { Header, Footer } from 'components';
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
         <title>Shortly - More than just shorter links</title>
       </Head>
       <Header />
+      <Footer />
     </>
   );
 }
