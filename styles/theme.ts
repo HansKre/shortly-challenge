@@ -1,9 +1,9 @@
 const theme = {
   typography: {
-    h1: '2rem',
+    h1: '4.4rem',
     h2: '1.3rem',
     logo: '2rem',
-    h3: '1.2rem',
+    h3: '1.17rem',
     p: '1.125rem', // 18px
     label: '1rem',
   },
@@ -22,7 +22,6 @@ const theme = {
       veryDarkViolet: 'hsl(260, 8%, 14%)',
     },
   },
-  borderRadius: '5px',
   paddingTB: '0.5rem 0',
   paddingTBLR: '0.5rem 0.5rem',
   margin: '0.5rem 0',
@@ -46,6 +45,7 @@ export interface Palette {
 }
 
 export interface Neutral {
+  sectionBackground: string;
   gray: string;
   grayishViolet: string;
   veryDarkBlue: string;
