@@ -1,6 +1,6 @@
 import svgImg from '@images/illustration-working.svg';
 import { Layout } from 'components';
-import { Button } from '../Button';
+import { Button } from 'components';
 import { H1 } from './H1';
 import { H3 } from './H3';
 import { Section } from './Section';

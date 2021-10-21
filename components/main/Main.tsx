@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import CallToAction from './call-to-action/CallToAction';
 import { Intro } from './intro';
 import { Statistics } from './statistics';
 
@@ -11,6 +12,7 @@ export default function Main() {
     <StyledMain role='main' aria-label='Main Content'>
       <Intro />
       <Statistics />
+      <CallToAction />
     </StyledMain>
   );
 }
