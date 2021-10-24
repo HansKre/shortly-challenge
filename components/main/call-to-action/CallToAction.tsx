@@ -6,6 +6,7 @@ import { H2 } from './H2';
 export default function CallToAction() {
   return (
     <Layout
+      id='calltoaction'
       bgColor={theme.palette.primary.darkViolet}
       bgImg={require('@images/bg-boost-desktop.svg').default.src}
       paddingTop={'0px'}

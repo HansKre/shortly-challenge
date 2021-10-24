@@ -43,6 +43,10 @@ describe('Basic DOM Tests', () => {
         );
       });
 
+      it('should render call to action', () => {
+        cy.get('#calltoaction [class^=H2]').contains('Boost your links today');
+      });
+
       it('should render footer correctly', () => {
         shortly('footer', 'rgb(255, 255, 255)');
       });
