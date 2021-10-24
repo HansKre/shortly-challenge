@@ -8,11 +8,11 @@ describe('Basic DOM Tests', () => {
         cy.visit('/');
       });
 
-      it('should render header correctly', () => {
+      it('should render header', () => {
         shortly('header', 'rgb(53, 50, 62)');
       });
 
-      it('should render main correctly', () => {
+      it('should render main', () => {
         cy.get('[class^=H1]').contains('More than just shorter links');
         cy.get('[class^=H3]').contains(
           'Build your brand`s recognition and get detailed insights on how your links are performing.'
@@ -47,8 +47,12 @@ describe('Basic DOM Tests', () => {
         cy.get('#calltoaction [class^=H2]').contains('Boost your links today');
       });
 
-      it('should render footer correctly', () => {
+      it('should render footer', () => {
         shortly('footer', 'rgb(255, 255, 255)');
+      });
+
+      it('should render Shortner', () => {
+        cy.get('[class^=Shortener]').should('exist');
       });
     });
   });
