@@ -6,7 +6,7 @@ import { Section } from './Section';
 
 export default function Statistics() {
   return (
-    <Layout bgColor={theme.palette.neutral.sectionBackground}>
+    <Layout id='statistics' bgColor={theme.palette.neutral.sectionBackground}>
       <Section role='article' aria-label='Advanced Statistics Section'>
         <H2>Advanced Statistics</H2>
         <P>

@@ -20,6 +20,12 @@ describe('Basic DOM Tests', () => {
         cy.get('[class^=H3]').contains(
           'Build your brand`s recognition and get detailed insights on how your links are performing.'
         );
+        cy.get('[class^=PositionedImage]').should(
+          'have.css',
+          'height',
+          '428px'
+        );
+        cy.get('[class^=PositionedImage]').should('have.css', 'width', '651px');
       });
 
       it('should render two buttons', () => {
@@ -31,6 +37,13 @@ describe('Basic DOM Tests', () => {
               .should('be.enabled')
               .should('have.text', 'Get Started');
           });
+      });
+
+      it('should render statistics', () => {
+        cy.get('#statistics [class^=H2]').contains('Advanced Statistics');
+        cy.get('#statistics [class^=P]').contains(
+          'Track how your links are performing across the web with our advanced statistics dashboard.'
+        );
       });
     });
   });
