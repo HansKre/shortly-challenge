@@ -10,7 +10,7 @@
     "lint": "next lint",
     "cypress:open": "cypress open",
     "cypress:run": "(npm run build) && (npm run start &) && (cypress run --browser chrome)",
-    "test": "npm run test:run"
+    "test": "npm run cypress:run"
   },
   "dependencies": {
     "next": "11.1.2",
