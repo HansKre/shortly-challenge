@@ -9,10 +9,7 @@ describe('Basic DOM Tests', () => {
       });
 
       it('should render header correctly', () => {
-        cy.get('header > [class^=Logo]')
-          .contains('Shortly')
-          .should('have.css', 'font-family', `"Source Sans Pro", sans-serif`)
-          .should('have.css', 'font-size', '32px');
+        shortly('header', 'rgb(53, 50, 62)');
       });
 
       it('should render main correctly', () => {
@@ -45,6 +42,18 @@ describe('Basic DOM Tests', () => {
           'Track how your links are performing across the web with our advanced statistics dashboard.'
         );
       });
+
+      it('should render footer correctly', () => {
+        shortly('footer', 'rgb(255, 255, 255)');
+      });
     });
   });
 });
+
+function shortly(headerFooter, color) {
+  cy.get(`${headerFooter} > [class^=Logo]`)
+    .contains('Shortly')
+    .should('have.css', 'font-family', `"Source Sans Pro", sans-serif`)
+    .should('have.css', 'font-size', '32px')
+    .should('have.css', 'color', color);
+}
