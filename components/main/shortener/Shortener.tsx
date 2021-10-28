@@ -1,17 +1,17 @@
-import { Box } from './Box';
+import { Controls } from './Controls';
 import { Container } from './Container';
 import { Input } from './Input';
-import { ButtonSecondary } from 'components';
+import { ButtonSecondary, Layout } from 'components';
 import React, { useEffect, useState } from 'react';
 import {
   LOCAL_STORAGE_KEY,
   SHRTCODE_API_BASE,
   URL_REGEX,
 } from '@root/constants';
+import theme from '@styles/theme';
+import { ShortenedUrls } from './shortened-urls';
+import { LocalStorage } from 'types';
 
-interface LocalStorage {
-  [url: string]: { short: string };
-}
 export default function Shortener() {
   const [url, setUrl] = useState('');
   const [urls, setUrls] = useState<LocalStorage>({});
@@ -27,6 +27,7 @@ export default function Shortener() {
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setUrl(e.currentTarget.value);
   }
+
   function handleClick() {
     // TODO: visualize validation below input-component
     if (!url) {
@@ -57,9 +58,14 @@ export default function Shortener() {
       alert('Not a valid url');
     }
   }
+
   return (
-    <>
-      <Box id='shortener'>
+    <Layout
+      id='shortener'
+      bgColor={theme.palette.neutral.sectionBackground}
+      paddingTop='0'
+    >
+      <Controls id='shortener_controls'>
         <Container>
           <Input
             value={url}
@@ -68,18 +74,8 @@ export default function Shortener() {
           />
           <ButtonSecondary onClick={handleClick}>Shorten It!</ButtonSecondary>
         </Container>
-      </Box>
-      <div>
-        {urls &&
-          Object.entries(urls).map((entry) => {
-            const [key, value] = entry;
-            return (
-              <p key={key}>
-                {key} - {value.short}
-              </p>
-            );
-          })}
-      </div>
-    </>
+      </Controls>
+      <ShortenedUrls urls={urls} />
+    </Layout>
   );
 }
