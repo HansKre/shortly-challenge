@@ -14,4 +14,12 @@ export const Input = styled.input`
   font-size: 1.1rem;
   letter-spacing: 0.5px;
   word-spacing: -1px;
+  &:focus,
+  &:active,
+  &:hover {
+    outline: ${theme.palette.secondary.red} groove 2px;
+  }
+  &:focus-visible {
+    background-color: white;
+  }
 `;
