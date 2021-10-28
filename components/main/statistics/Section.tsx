@@ -5,5 +5,5 @@ export const Section = styled.section`
   flex-direction: column;
   align-items: center;
   height: calc(100vh + 72px);
-  padding-top: 135px;
+  padding-top: 42px;
 `;
