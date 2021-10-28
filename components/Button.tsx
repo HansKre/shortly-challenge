@@ -11,4 +11,7 @@ export const Button = styled.button`
   border-radius: ${theme.borderRadius};
   border: none;
   cursor: pointer;
+  &:hover {
+    background-color: ${theme.palette.primary.cyanActive};
+  }
 `;

@@ -10,6 +10,7 @@ const theme = {
   palette: {
     primary: {
       cyan: 'hsl(180, 66%, 49%)',
+      cyanActive: '	hsl(178, 57%, 75%)',
       darkViolet: 'hsl(257, 27%, 26%)',
     },
     secondary: {
@@ -58,6 +59,7 @@ export interface Neutral {
 
 export interface Primary {
   cyan: string;
+  cyanActive: string;
   darkViolet: string;
 }
 
