@@ -25,7 +25,7 @@ describe('Basic DOM Tests', () => {
         cy.get('[class^=PositionedImage]').should('have.css', 'width', '651px');
       });
 
-      it('should render two buttons', () => {
+      it('should render two buttons in sections', () => {
         cy.get('[class^=Section] > [class^=Button]')
           .should('exist')
           .should('have.length', 2)
@@ -51,8 +51,14 @@ describe('Basic DOM Tests', () => {
         shortly('footer', 'rgb(255, 255, 255)');
       });
 
-      it('should render Shortner', () => {
-        cy.get('[class^=Shortener]').should('exist');
+      it('should render Shortener', () => {
+        cy.get('#shortener').should('exist');
+        cy.get('[class^=Input]')
+          .invoke('attr', 'placeholder')
+          .should('eq', 'Shorten a link here...');
+        cy.get('#shortener [class^=Button]')
+          .should('be.enabled')
+          .should('have.text', 'Shorten It!');
       });
     });
   });

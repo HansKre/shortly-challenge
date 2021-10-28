@@ -10,4 +10,5 @@ export const Button = styled.button`
   padding: 0.9rem 2.1rem;
   border-radius: ${theme.borderRadius};
   border: none;
+  cursor: pointer;
 `;

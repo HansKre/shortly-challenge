@@ -24,6 +24,7 @@ const theme = {
     },
   },
   borderRadius: '30px',
+  borderRadiusSmall: '10px',
   paddingTB: '0.5rem 0',
   paddingTBLR: '0.5rem 0.5rem',
   margin: '0.5rem 0',
@@ -35,6 +36,7 @@ export interface Theme {
   typography: Typography;
   palette: Palette;
   borderRadius: string;
+  borderRadiusSmall: string;
   paddingTB: string;
   paddingTBLR: string;
   margin: string;

@@ -10,3 +10,7 @@ body {
 *::before {
   box-sizing: border-box;
 }
+
+input {
+  font-family: 'Poppins', sans-serif;
+}
