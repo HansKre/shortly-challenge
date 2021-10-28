@@ -42,16 +42,25 @@ export default function Shortener() {
       }
       fetch(`${SHRTCODE_API_BASE}/shorten?url=${url}`)
         .then((res) => {
-          if (!res.ok) throw new Error(res.statusText);
-          return res.json();
-        })
-        .then((res) => {
-          if (res.ok) {
-            setUrls({ ...urls, [url]: { short: res.result.full_short_link } }),
-              window.localStorage.setItem('shortly', JSON.stringify(urls));
+          if (res.ok || res.status === 400) {
+            return res.json();
           } else {
             console.log(res);
             alert('Something went wrong');
+          }
+        })
+        .then((res) => {
+          if (res.ok) {
+            const newUrls = {
+              ...urls,
+              [url]: { short: res.result.full_short_link },
+            };
+            setUrls(newUrls),
+              window.localStorage.setItem('shortly', JSON.stringify(newUrls));
+            setUrl('');
+          } else {
+            console.log(res);
+            alert(`${res.error}, reson: ${res?.disallowed_reason}`);
           }
         });
     } else {
